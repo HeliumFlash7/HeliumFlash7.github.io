@@ -18,14 +18,14 @@
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0f1218; --card: #171b23; --line: #262c38; --ink: #eef0f4; --ink-2: #b6bcc8; --mute: #7d8595; --gold: #d3ab5a; --gold-soft: #2b2416; --shadow: 0 10px 30px -18px rgba(0,0,0,.7); } }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16.5px; line-height: 1.65; -webkit-font-smoothing: antialiased; transition: background .2s, color .2s; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 18px; line-height: 1.65; -webkit-font-smoothing: antialiased; transition: background .2s, color .2s; }
   a { color: inherit; text-decoration: none; }
   .wrap { max-width: 1320px; margin: 0 auto; padding: 0 40px; }
 
   .top { display: flex; justify-content: space-between; align-items: center; height: 84px; }
   .brand { font-family: var(--serif); font-weight: 700; font-size: 26px; letter-spacing: -.01em; }
   .top nav { display: flex; gap: 6px; align-items: center; }
-  .top nav a { padding: 9px 16px; border-radius: 10px; font-size: 15px; font-weight: 500; color: var(--ink-2); }
+  .top nav a { padding: 9px 16px; border-radius: 10px; font-size: 16px; font-weight: 500; color: var(--ink-2); }
   .top nav a:hover, .top nav a.active { background: var(--gold-soft); color: var(--ink); }
   .theme { width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); cursor: pointer; display: grid; place-items: center; margin-left: 10px; }
   .theme:hover { border-color: var(--gold); color: var(--gold); }
@@ -37,16 +37,16 @@
   .photo { width: 100%; aspect-ratio: 1; border-radius: 22px; overflow: hidden; box-shadow: var(--shadow); background: var(--card); }
   .photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
   aside h1 { font-family: var(--serif); font-weight: 700; font-size: 32px; margin: 26px 0 6px; letter-spacing: -.01em; }
-  aside .role { color: var(--gold); font-weight: 600; font-size: 17px; margin: 0 0 2px; }
-  aside .uni { color: var(--ink-2); margin: 0; font-size: 16px; }
+  aside .role { color: var(--gold); font-weight: 600; font-size: 18px; margin: 0 0 2px; }
+  aside .uni { color: var(--ink-2); margin: 0; font-size: 17px; }
   aside .uni a:hover { color: var(--gold); }
   .icons { display: flex; justify-content: center; gap: 8px; margin: 22px 0 26px; }
-  .icons a { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; color: var(--ink-2); border: 1px solid transparent; transition: all .15s; }
-  .icons a:hover { color: var(--gold); border-color: var(--line); background: var(--card); }
+  .icons a, .icons .egg { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; color: var(--ink-2); border: 1px solid transparent; transition: all .15s; cursor: pointer; }
+  .icons a:hover, .icons .egg:hover { color: var(--gold); border-color: var(--line); background: var(--card); }
   .icons svg { width: 20px; height: 20px; }
   .box { background: var(--card); border-radius: 14px; padding: 18px 20px; text-align: left; }
-  .box h3 { margin: 0 0 10px; font-size: 16px; font-weight: 600; }
-  .box ul { list-style: none; padding: 0; margin: 0; color: var(--ink-2); font-size: 15px; }
+  .box h3 { margin: 0 0 10px; font-size: 17px; font-weight: 600; }
+  .box ul { list-style: none; padding: 0; margin: 0; color: var(--ink-2); font-size: 16px; }
   .box li { padding: 3px 0; }
   .cvbtn { display: inline-flex; gap: 8px; align-items: center; margin-top: 18px; padding: 11px 20px; border: 1px solid var(--line); border-radius: 12px; font-weight: 600; font-size: 15px; }
   .cvbtn:hover { border-color: var(--gold); color: var(--gold); }
@@ -56,7 +56,7 @@
   h2 .more { margin-left: auto; font-family: var(--sans); font-size: 15px; font-weight: 500; color: var(--gold); white-space: nowrap; }
   h2 .more:hover { text-decoration: underline; text-underline-offset: 3px; }
   section { margin-bottom: 64px; scroll-margin-top: 24px; }
-  .about p { margin: 0 0 14px; font-size: 18px; color: var(--ink-2); }
+  .about p { margin: 0 0 14px; font-size: 19.5px; color: var(--ink-2); }
   .about p a { color: var(--gold); }
   .about p a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
@@ -65,24 +65,24 @@
   .pcard .thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .pcard .thumb.diagram img { object-fit: contain; padding: 4%; box-sizing: border-box; }
   :root[data-theme="dark"] .pcard .thumb.diagram { background: #f4f5f7; }
-  .pcard:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--gold); }
-  .pcard h3 { font-size: 17.5px; font-weight: 600; margin: 0 0 6px; line-height: 1.35; letter-spacing: -.005em; }
+  .pcard:hover { border-color: var(--gold); }
+  .pcard h3 { font-size: 19px; font-weight: 600; margin: 0 0 6px; line-height: 1.35; letter-spacing: -.005em; }
   .pcard h3 a:hover { color: var(--gold); }
-  .pcard .authors { margin: 0; font-size: 15.5px; color: var(--ink-2); }
+  .pcard .authors { margin: 0; font-size: 16.5px; color: var(--ink-2); }
   .pcard .authors b { color: var(--gold); font-weight: 600; }
-  .pcard .venue { margin: 3px 0 0; font-size: 14.5px; color: var(--ink-2); display: flex; align-items: center; gap: 8px; }
+  .pcard .venue { margin: 3px 0 0; font-size: 15.5px; color: var(--ink-2); display: flex; align-items: center; gap: 8px; }
   .pcard .venue .hint { margin-left: auto; font-size: 12.5px; color: var(--mute); font-weight: 500; white-space: nowrap; }
   .pcard .venue .hint::after { content: " ▾"; display: inline-block; transition: transform .25s; }
-  .pcard.open .venue .hint::after, .pcard:hover .venue .hint::after { transform: rotate(180deg); }
+  .pcard.open .venue .hint::after { transform: rotate(180deg); }
   .pcard .venue .tag { color: var(--gold); background: var(--gold-soft); padding: 1px 9px; border-radius: 999px; font-size: 12.5px; font-weight: 600; margin-left: 8px; }
-  .pcard .tldr { margin: 0; font-size: 14.5px; color: var(--mute); max-height: 0; opacity: 0; overflow: hidden; transition: max-height .35s ease, opacity .25s ease, margin .35s ease; }
-  .pcard:hover .tldr, .pcard.open .tldr { max-height: 220px; opacity: 1; margin: 8px 0 2px; }
+  .pcard .tldr { margin: 0; font-size: 15.5px; color: var(--mute); max-height: 0; opacity: 0; overflow: hidden; transition: max-height .35s ease, opacity .25s ease, margin .35s ease; }
+  .pcard.open .tldr { max-height: 220px; opacity: 1; margin: 8px 0 2px; }
   .pcard .plinks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-  .pcard .plinks a { font-size: 13.5px; font-weight: 600; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--ink-2); }
+  .pcard .plinks a { font-size: 14.5px; font-weight: 600; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--ink-2); }
   .pcard .plinks a:hover { border-color: var(--gold); color: var(--gold); }
 
   .news { list-style: none; padding: 0; margin: 0; }
-  .news li { display: grid; grid-template-columns: 110px 1fr; gap: 16px; padding: 12px 0; border-top: 1px solid var(--line); font-size: 16px; }
+  .news li { display: grid; grid-template-columns: 110px 1fr; gap: 16px; padding: 12px 0; border-top: 1px solid var(--line); font-size: 17px; }
   .news li:last-child { border-bottom: 1px solid var(--line); }
   .news time { color: var(--gold); font-weight: 600; font-size: 14.5px; padding-top: 2px; }
   .news em { font-style: italic; }
@@ -92,7 +92,7 @@
 
   .two { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
   .cv { list-style: none; padding: 0; margin: 0; }
-  .cv li { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 11px 0; border-top: 1px solid var(--line); font-size: 15.5px; }
+  .cv li { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 11px 0; border-top: 1px solid var(--line); font-size: 16.5px; }
   .cv li:last-child { border-bottom: 1px solid var(--line); }
   .cv li span:first-child { color: var(--mute); font-size: 14px; padding-top: 2px; }
   .cv li b { font-weight: 600; display: block; }
@@ -118,7 +118,7 @@
   }
 
   /* ---- ocean of truth (Easter egg): long-press the name for 5 s ---- */
-  #myname { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+  #cosmos { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; touch-action: manipulation; }
   #page { transform-origin: 50% 40%; }
   body.ocean #page { transition: transform 1.6s cubic-bezier(.6,0,.4,1), filter 1.6s ease, opacity 1.6s ease; transform: scale(.84) translateY(-5vh); filter: blur(10px) brightness(.3); opacity: 0; pointer-events: none; }
   body.ocean { overflow: hidden; }
@@ -127,12 +127,12 @@
   #ocean img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; display: block; opacity: 0; transition: opacity 2.2s ease .3s; }
   body.ocean #ocean img { opacity: 1; animation: oceandrift 40s ease-in-out infinite alternate; }
   @keyframes oceandrift { from { transform: scale(1.02) translate(0,0); } to { transform: scale(1.09) translate(-1.2%, .8%); } }
-  #ocean .veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 28%, rgba(0,0,0,0) 62%, rgba(0,0,0,.72) 100%); }
-  #ocean .quote { position: absolute; left: 50%; transform: translateX(-50%); bottom: max(40px, 9vh); width: min(92vw, 880px); text-align: center; font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-weight: 500; font-size: clamp(24px, 3.4vw, 42px); line-height: 1.3; color: #f3ead9; text-shadow: 0 0 30px rgba(0,0,0,.8); }
-  #ocean .quote .who { display: block; margin-top: 14px; font-style: normal; font-weight: 500; font-size: 13px; letter-spacing: .28em; text-transform: uppercase; color: rgba(243,234,217,.6); font-family: system-ui, sans-serif; }
-  #ocean .quote .text { display: inline-block; opacity: 0; transform: translateY(10px); transition: opacity 1.3s ease 1.4s, transform 1.3s ease 1.4s; }
-  body.ocean #ocean .quote .text { opacity: 1; transform: none; }
-  #ocean .quote .who { opacity: 0; transition: opacity .9s ease 2.6s; }
+  #ocean .veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 50%, rgba(0,0,0,.55) 72%, rgba(0,0,0,.82) 100%); }
+  #ocean .quote { position: absolute; left: 50%; transform: translateX(-50%); bottom: max(36px, 8vh); width: min(92vw, 920px); text-align: center; font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-weight: 500; color: #f3ead9; text-shadow: 0 0 30px rgba(0,0,0,.85), 0 1px 2px rgba(0,0,0,.6); }
+  #ocean .quote .line { display: block; opacity: 0; transform: translateY(10px); transition: opacity 1.3s ease, transform 1.3s ease; }
+  #ocean .quote .line { font-size: clamp(24px, 3.2vw, 42px); line-height: 1.3; color: #f3ead9; text-wrap: balance; transition-delay: 1.4s; }
+  body.ocean #ocean .quote .line { opacity: 1; transform: none; }
+  #ocean .quote .who { display: block; margin-top: 18px; font-style: normal; font-weight: 500; font-size: 13px; letter-spacing: .28em; text-transform: uppercase; color: rgba(243,234,217,.6); font-family: system-ui, sans-serif; opacity: 0; transition: opacity .9s ease 2.6s; }
   body.ocean #ocean .quote .who { opacity: 1; }
   /* credit + return */
   #ocean .credit { position: absolute; right: 24px; bottom: 18px; font-family: "DM Mono", ui-monospace, monospace; font-size: 14px; letter-spacing: .06em; color: rgba(255,255,255,.78); text-shadow: 0 1px 8px rgba(0,0,0,.8); opacity: 0; transition: opacity 1s ease 2.6s; }
@@ -160,12 +160,15 @@
   <div class="grid">
     <aside class="r">
       <div class="photo"><img src="assets/headshot_stockholm.jpg" alt="Zhiyuan Zhu"></div>
-      <h1 id="myname">Zhiyuan Zhu</h1>
+      <h1>Zhiyuan Zhu</h1>
       <p class="role">M.Sc. Student in Robotics</p>
       <p class="uni"><a href="https://ethz.ch/">ETH Zurich</a></p>
       <div class="icons">
         <a href="mailto:zhiyzhu@student.ethz.ch" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
         <a href="https://scholar.google.com/citations?user=J8mnBOAAAAAJ" title="Google Scholar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3L2 9l10 6 10-6-10-6z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg></a>
+        <span class="egg" id="cosmos" role="img" aria-label="">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="5.2"/><path d="M3.5 12a8.5 8.5 0 0 1 8.5-8.5M20.5 12a8.5 8.5 0 0 1-8.5 8.5" stroke-opacity=".55"/></svg>
+        </span>
       </div>
       <div class="box">
         <h3>Research Interests</h3>
@@ -271,9 +274,9 @@
 <div id="ocean" aria-hidden="true">
   <img id="bhimg" alt="" data-src="assets/blackhole-m87-eht.jpg">
   <div class="veil"></div>
-  <div class="quote" id="quote"><span class="text">…whilst the great ocean of truth lay all undiscovered before me.</span><span class="who">Isaac Newton</span></div>
+  <div class="quote" id="quote"><span class="line l1">the great ocean of truth lay all undiscovered before me</span><span class="who">Isaac Newton</span></div>
   <a class="back" href="#" id="oceanback">↑ return to the surface · Esc</a>
-  <div class="credit">Image: EHT Collaboration</div>
+  <div class="credit">M87*, April 2019 · Event Horizon Telescope</div>
 </div>
 <script>
   (function(){ var l=document.getElementById('newslist'), b=document.getElementById('newsmore'), n=l.children.length; if(n<=3){ b.style.display='none'; return; } b.textContent='Show all news ('+n+')'; b.addEventListener('click', function(){ var on=l.classList.toggle('all'); b.textContent = on ? 'Show fewer' : 'Show all news ('+n+')'; }); })();
@@ -282,7 +285,7 @@
 
 <script>
 (function(){
-  var HOLD=5000, name=document.getElementById('myname'), page=document.getElementById('page'), img=document.getElementById('bhimg'), ocean=document.getElementById('ocean');
+  var HOLD=5000, name=document.getElementById('cosmos'), page=document.getElementById('page'), img=document.getElementById('bhimg'), ocean=document.getElementById('ocean');
   if(!name||!page||!ocean) return;
   var open=false, pressing=false, timer=null, px=0, py=0;
   /* long press */
