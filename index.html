@@ -116,6 +116,14 @@
 
   /* ---- ocean of truth (Easter egg): long-press the name for 5 s ---- */
   #cosmos { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; touch-action: manipulation; }
+  #cosmos svg { overflow: visible; }
+  #cosmos svg * { transform-box: fill-box; transform-origin: center; }
+  #cosmos.go svg circle:nth-child(2) { animation: cosmoscollapse .6s cubic-bezier(.4,0,.2,1); }
+  #cosmos.go svg path { animation: cosmoscollapse .6s cubic-bezier(.4,0,.2,1) .05s; }
+  #cosmos.go svg circle:first-child { animation: cosmoscore .6s ease; }
+  @keyframes cosmoscollapse { 0% { transform: scale(1); opacity: 1; } 45% { transform: scale(.15); opacity: .2; } 100% { transform: scale(1); opacity: 1; } }
+  @keyframes cosmoscore { 45% { transform: scale(1.8); } }
+  @media (prefers-reduced-motion: reduce) { #cosmos.go svg * { animation: none; } }
   #page { transform-origin: 50% 40%; }
   body.ocean #page { transition: transform 1.6s cubic-bezier(.6,0,.4,1), filter 1.6s ease, opacity 1.6s ease; transform: scale(.84) translateY(-5vh); filter: blur(10px) brightness(.3); opacity: 0; pointer-events: none; }
   body.ocean { overflow: hidden; }
@@ -286,7 +294,8 @@
   var open=false, pressing=false, timer=null, px=0, py=0;
   /* long press */
   function start(e){ if(open||pressing) return; if(e.pointerType==='mouse'&&e.button!==0) return; pressing=true; px=e.clientX; py=e.clientY; try{ name.setPointerCapture(e.pointerId); }catch(x){} timer=setTimeout(function(){ pressing=false; openOcean(); },HOLD); }
-  function cancel(){ if(!pressing) return; pressing=false; clearTimeout(timer); timer=null; }
+  var tapT=null; function tap(){ name.classList.remove('go'); void name.offsetWidth; name.classList.add('go'); clearTimeout(tapT); tapT=setTimeout(function(){ name.classList.remove('go'); },700); }
+  function cancel(e){ if(!pressing) return; pressing=false; clearTimeout(timer); timer=null; if(e&&e.type==='pointerup') tap(); }
   function move(e){ if(pressing&&Math.hypot(e.clientX-px,e.clientY-py)>14) cancel(); }
   name.addEventListener('pointerdown',start); name.addEventListener('pointermove',move);
   ['pointerup','pointercancel','pointerleave','lostpointercapture'].forEach(function(ev){ name.addEventListener(ev,cancel); });
