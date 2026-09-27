@@ -56,9 +56,10 @@
   .about p { margin: 0 0 14px; font-size: 19.5px; color: var(--ink-2); text-align: justify; hyphens: auto; -webkit-hyphens: auto; text-wrap: pretty; }
   .about p a { color: var(--gold); }
   .about p a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .about p b { font-weight: 600; color: var(--ink); }
 
   .pcard { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px 16px 16px; margin-bottom: 12px; cursor: pointer; transition: transform .15s, box-shadow .15s, border-color .15s; display: grid; grid-template-columns: 212px 1fr; gap: 20px; align-items: start; }
-  .pcard .thumb { aspect-ratio: 16 / 10; border-radius: 10px; overflow: hidden; background: #fff; border: 1px solid var(--line); }
+  .pcard .thumb { aspect-ratio: 7 / 4; border-radius: 10px; overflow: hidden; background: #fff; border: 1px solid var(--line); }
   .pcard .thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .pcard .thumb.diagram img { object-fit: contain; padding: 4%; box-sizing: border-box; }
   :root[data-theme="dark"] .pcard .thumb.diagram { background: #f4f5f7; }
@@ -83,6 +84,8 @@
   .news li:last-child { border-bottom: 1px solid var(--line); }
   .news time { color: var(--gold); font-weight: 600; font-size: 14.5px; padding-top: 2px; }
   .news em { font-style: italic; }
+  .news a { color: var(--gold); }
+  .news a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .news:not(.all) li:nth-child(n+4) { display: none; }
   .morebtn { margin-top: 12px; font: inherit; font-size: 14px; font-weight: 600; color: var(--gold); background: none; border: 0; padding: 0; cursor: pointer; }
   .morebtn:hover { text-decoration: underline; text-underline-offset: 3px; }
@@ -183,9 +186,9 @@
     <main>
       <section id="about" class="about r" style="--d:.1s">
         <h2>About</h2>
-        <p>I am a master's student in Robotics, Systems and Control at <a href="https://ethz.ch/">ETH Zurich</a>. I work in the <a href="https://rpg.ifi.uzh.ch/">Robotics and Perception Group</a> at the University of Zurich, led by <a href="https://rpg.ifi.uzh.ch/people_scaramuzza.html">Prof. Davide Scaramuzza</a>. I&nbsp;also work with <a href="https://renyunfan.cn/">Prof. Yunfan Ren</a>.</p>
-        <p>Prior to that, I earned a B.Eng. in Automation from <a href="https://en.sjtu.edu.cn/">Shanghai Jiao Tong University</a>, working with <a href="https://sais.sjtu.edu.cn/faculty/liyuanlong.html">Prof. Yuanlong Li</a> and <a href="https://engineering.virginia.edu/faculty/zongli-lin">Prof. Zongli Lin</a> on stabilizing constrained control systems.</p>
-        <p>My research interests are robotics, robot learning, learning-based control, reinforcement learning, and control theory. I want to develop robots that learn and act reliably in the real&nbsp;world.</p>
+        <p>I am a master's student in Robotics, Systems and Control at <a href="https://ethz.ch/">ETH Zurich</a>. I work in the <a href="https://rpg.ifi.uzh.ch/">Robotics and Perception Group</a> at the University of Zurich, led by <a href="https://rpg.ifi.uzh.ch/people_scaramuzza.html">Prof. Davide Scaramuzza</a>. I&nbsp;also work closely with <a href="https://renyunfan.cn/">Prof. Yunfan Ren</a> at the ORCA Lab.</p>
+        <p>Prior to that, I obtained my B.Eng. in Automation from <a href="https://en.sjtu.edu.cn/">Shanghai Jiao Tong University</a>, working with <a href="https://sais.sjtu.edu.cn/faculty/liyuanlong.html">Prof. Yuanlong Li</a> and <a href="https://engineering.virginia.edu/faculty/zongli-lin">Prof. Zongli Lin</a> on stabilizing constrained control systems.</p>
+        <p>My research interests are <b>robotics</b>, <b>robot learning</b>, <b>learning-based control</b>, <b>reinforcement learning</b>, and <b>control theory</b>. I want to develop robots that learn and act reliably in the real&nbsp;world.</p>
       </section>
 
       <section id="publications" class="r" style="--d:.2s">
@@ -199,7 +202,7 @@
           </div>
         </article>
         <article class="pcard">
-          <div class="thumb diagram"><img src="assets/pubs/continual-diagram.png" alt="Continual refinement pipeline: real-world trajectories, recurrent encoder, structured latent dynamics space, variational dynamics simulation with a rigid-body prior and neural residual, and parallel policy learning" loading="lazy"></div>
+          <div class="thumb photo"><img src="assets/pubs/continual-diagram.png" alt="Continual refinement pipeline: real-world trajectories, recurrent encoder, structured latent dynamics space, variational dynamics simulation with a rigid-body prior and neural residual, and parallel policy learning" loading="lazy"></div>
           <div>
           <h3><a href="https://arxiv.org/abs/2606.27353">Continual Robot Policy Learning via Variational Neural Dynamics</a></h3>
           <p class="authors">Jiaxu Xing, <b>Zhiyuan Zhu</b>, Yunfan Ren, Ismail Geles, Yifan Zhai, Rudolf Reiter, Davide Scaramuzza</p>
@@ -243,13 +246,13 @@
       <section id="news">
         <h2>News</h2>
         <ul class="news" id="newslist">
-          <li><time>Jun 2026</time><span>New preprint: <em>Continual Robot Policy Learning via Variational Neural Dynamics</em> is on arXiv.</span></li>
-          <li><time>Apr 2026</time><span><em>Learning Agile Quadrotor Flight in the Real World</em> accepted to RSS 2026.</span></li>
-          <li><time>Feb 2026</time><span>Preprint: <em>Learning Agile Quadrotor Flight in the Real World</em> is on arXiv.</span></li>
+          <li><time>Jun 2026</time><span><em>Continual Robot Policy Learning via Variational Neural Dynamics</em> is on arXiv.</span></li>
+          <li><time>Apr 2026</time><span><em>Learning Agile Quadrotor Flight in the Real World</em> accepted to <a href="https://roboticsconference.org/2026/">RSS 2026</a>.</span></li>
+          <li><time>Feb 2026</time><span><em>Learning Agile Quadrotor Flight in the Real World</em> is on arXiv.</span></li>
           <li><time>Sep 2025</time><span>Joined the <a href="https://rpg.ifi.uzh.ch/">Robotics and Perception Group</a> at the University of Zurich.</span></li>
           <li><time>Sep 2024</time><span>Started the M.Sc. in Robotics, Systems and Control at ETH Zurich.</span></li>
           <li><time>Jun 2024</time><span>Received my bachelor's degree in Automation from Shanghai Jiao Tong University.</span></li>
-          <li><time>Jul 2023</time><span>Presented our paper on practical stabilization of the double integrator at the IFAC World Congress in Yokohama, Japan.</span></li>
+          <li><time>Jul 2023</time><span>Presented our paper on practical stabilization of the double integrator at the <a href="https://www.ifac2023.org/index.html">IFAC World Congress</a> in Yokohama, Japan.</span></li>
         </ul>
         <button class="morebtn" id="newsmore" type="button">Show all news</button>
       </section>
